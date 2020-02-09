@@ -10,6 +10,8 @@
     padding-right: 180px;
     height: 30px;
 }
+
+
 #socialbar-icon li i{
     background-color: white;
     border-radius: 50% 50%;
@@ -92,6 +94,8 @@ nav ul li a{
     text-decoration: none;
     
 }
+
+
 
 .dropdown-content{
     display: none;
