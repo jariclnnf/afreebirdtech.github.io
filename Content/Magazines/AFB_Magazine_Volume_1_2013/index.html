@@ -19,11 +19,23 @@
             background-color:#ccc;
             background-size:100% 100%;
         }
+        .turn-button{
+            border-style: none;
+            background-color:rgb(175, 177, 180);
+            opacity: 0.9;
+            
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="magazine" >
-        <div style="background-image: url(pages/AFB_Magazine_Volume_1_2013-01.png);"></div>
+        <div style="background-image: url(pages/AFB_Magazine_Volume_1_2013-01.png);">
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe></div>
         <div style="background-image: url(pages/AFB_Magazine_Volume_1_2013-02.png);"></div>
         <div style="background-image: url(pages/AFB_Magazine_Volume_1_2013-03.png);"></div>
         <div style="background-image: url(pages/AFB_Magazine_Volume_1_2013-04.png);"></div>
@@ -48,11 +60,12 @@
         
     </div>
     <div class="toolbar" style="text-align: center;">
-        <button id="previous">Previous</button>
+        <button class="turn-button" id="previous" >
+            <img src="/Content/upload/left-arrow.png" alt="Top" width="40" height="40"></button>
         
-        <!-- <label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span> -->
-        
-        <button id="next">Next</button>
+        <button class="turn-button" id="next">
+            <img src="/Content/upload/right-arrow.png" alt="Top" width="40" height="40">
+        </button>
     </div>
     
     
