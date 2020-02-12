@@ -29,10 +29,22 @@
 		<div style="background-image:url(pages/05.jpg);"></div>
 		<div style="background-image:url(pages/06.jpg);"></div>
 	</div>
+	<div class="toolbar" style="text-align: center;">
+		<button id="previous">Previous</button>
+		
+		<!-- <label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span> -->
+		
+		<button id="next">Next</button>
+	</div>
 	
 	
 	<script type="text/javascript">
-		
+		$("#previous").on("click",function(event) {
+			$('#magazine').turn('previous');
+		});
+		$("#next").on("click",function(event) {
+			$('#magazine').turn('next');
+		});
 		$(window).ready(function() {
 			$('#magazine').turn({
 				display: 'double',
