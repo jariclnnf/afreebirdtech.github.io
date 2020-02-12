@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+
+col {
+  display: table-column;
+} 
+</style>
+</head>
+<body>
+
+<p>Look how the col element is displayed below:</p>
+
+<table>
+  <colgroup>
+    <col span="2" style="background-color:red">
+    <col style="background-color:yellow">
+  </colgroup>
+  <tr>
+    <th><div class="column" style="height: 370px; width: 300px;">
+        <a data-toggle="modal" data-target="#myModal" style="height: 370px; width: 300px;">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="Content/Magazines/AFB_Magazine_Volume_5_2018/pages/AFB_Magazine_Volume_5_2018-01.png" >
+                </div>
+                <div class="details" >
+                    <img src="Content/Magazines/AFB_Magazine_Volume_5_2018/pages/AFB_Magazine_Volume_5_2018-02.png" style="width: 300px;"></div>
+                </div>
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog" >
+                <div class="modal-dialog"style="margin-left: 20%;">
+                    <!-- Modal content-->
+                    <div class="modal-content"  style="height: 1200px;width:1230px;background-color: rgba(83, 53, 29, 0);">
+                        <div class="modal-body" >
+                            <iframe frameborder="0" src="Content/Magazines/AFB_Magazine_Volume_5_2018/index.html"
+                            style="position: absolute; width: 1200px; height: 1200px; border-radius: 3px;"></iframe>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div></th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>5869207</td>
+    <td>My first CSS</td>
+    <td>$49</td>
+  </tr>
+</table>
+
+<p>Change the default CSS settings to see the effect.</p>
+
+</body>
+</html>

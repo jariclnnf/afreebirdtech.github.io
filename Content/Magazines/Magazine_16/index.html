@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/Content/js/turn.min.js"></script>
+    
+    <style type="text/css">
+        body{
+            /* background:#ccc; */
+        }
+        #magazine{
+            text-align: center;
+            width:1152px;
+            height:752px;
+            /* width:1000%;
+            height:1000%; */
+        }
+        #magazine .turn-page{
+            background-color:#ccc;
+            background-size:100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="magazine" >
+        <div style="background-image: url(pages/Magazine_16-01.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-02.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-03.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-04.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-05.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-06.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-07.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-08.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-09.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-10.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-11.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-12.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-13.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-14.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-15.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-16.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-17.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-18.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-19.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-20.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-21.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-22.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-23.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-24.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-25.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-26.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-27.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-28.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-29.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-30.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-31.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-32.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-33.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-34.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-35.png);"></div>
+        
+        <div style="background-image: url(pages/Magazine_16-36.png);"></div>
+        
+        
+    </div>
+    <div class="toolbar" style="text-align: center;">
+        <button id="previous">Previous</button>
+        
+        <!-- <label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span> -->
+        
+        <button id="next">Next</button>
+    </div>
+    
+    
+    <script type="text/javascript">
+        $("#previous").on("click",function(event) {
+            $('#magazine').turn('previous');
+        });
+        $("#next").on("click",function(event) {
+            $('#magazine').turn('next');
+        });
+        $(window).ready(function() {
+            $('#magazine').turn({
+                display: 'double',
+                acceleration: true,
+                gradients: !$.isTouch,
+                elevation:50,
+                when: {
+                    turned: function(e, page) {
+                        /*console.log('Current view: ', $(this).turn('view'));*/
+                    }
+                }
+            });
+        });
+        
+        
+        $(window).bind('keydown', function(e){
+            
+            if (e.keyCode==37)
+            $('#magazine').turn('previous');
+            else if (e.keyCode==39)
+            $('#magazine').turn('next');
+            
+        });
+        
+    </script>
+    
+</body>
+</html>
