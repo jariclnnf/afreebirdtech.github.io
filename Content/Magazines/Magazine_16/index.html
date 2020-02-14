@@ -12,6 +12,7 @@
 <body>
     <div class="magazine-viewport">
         <div class="container">
+            <div class="share-tool-placeholder"></div>
             <div class="magazine">
                 <div style="background-image: url(pages/Magazine_16-01.png);"></div>
                 <div style="background-image: url(pages/Magazine_16-02.png);"></div>
@@ -59,42 +60,46 @@
                         <img src="/Content/upload/right-arrow.png" alt="Top" width="40" height="40">
                     </button>
                 </div>
+            </div>
         </div>
-    </div>
-    
-    
-    <script type="text/javascript">
-         $("#previous").on("click",function(event) {
+        
+        
+        <script type="text/javascript">
+            $(function(){
+                $(".share-tool-placeholder").load("/Content/share-magazine-tool.html");
+            });
+            
+            $("#previous").on("click",function(event) {
                 $('.magazine').turn('previous');
             });
             $("#next").on("click",function(event) {
                 $('.magazine').turn('next');
             });
-
-        function loadApp() {
-            $('.magazine').turn({
-                width:922,
-                height:600,
-                elevation: 50,
-                gradients: true,
-                autoCenter: true
+            
+            function loadApp() {
+                $('.magazine').turn({
+                    width:922,
+                    height:600,
+                    elevation: 50,
+                    gradients: true,
+                    autoCenter: true
+                    
+                });
+            }
+            $(window).bind('keydown', function(e){
+                if (e.keyCode==37)
+                $('.magazine').turn('previous');
+                else if (e.keyCode==39)
+                $('.magazine').turn('next');
                 
             });
-        }
-        $(window).bind('keydown', function(e){
-            if (e.keyCode==37)
-            $('.magazine').turn('previous');
-            else if (e.keyCode==39)
-            $('.magazine').turn('next');
             
-        });
+            yepnope({
+                test : Modernizr.csstransforms,
+                complete: loadApp
+            });
+            
+        </script>
         
-        yepnope({
-            test : Modernizr.csstransforms,
-            complete: loadApp
-        });
-        
-    </script>
-    
-</body>
-</html>
+    </body>
+    </html>

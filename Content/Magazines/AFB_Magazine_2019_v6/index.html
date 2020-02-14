@@ -6,28 +6,14 @@
     <script type="text/javascript" src="/Content/js/turn.js"></script>
     <script type="text/javascript" src="/Content/js/modernizr.2.5.3.min.js"></script>
     <link rel="stylesheet" href="/Content/css/magazine-pages.css">
-    <!-- <script src="//code.jquery.com/jquery-3.2.1.min.js"></script> -->
-    <!-- <script src="jquery.fancybox.min.js"></script> -->
     
     
 </head>
 <body>
     <div class="magazine-viewport">
-        
+       
         <div class="container" >
-            <div class="share-tool-placeholder" style="width: 200px; height: 380px;  margin-top: -250%; margin-left: -60%;" >
-                <!-- <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
-                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
-                </a>
-                
-                <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
-                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-                </a>
-                
-                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
-                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
-                </a> -->
-            </div  >
+            <div class="share-tool-placeholder"></div>
             <div class="magazine" >
                 <div style="background-image: url(pages/Magazine_2019_v6-01.png);"></div>
                 <div style="background-image: url(pages/Magazine_2019_v6-02.png);"></div>
@@ -93,12 +79,8 @@
         
         
         <script type="text/javascript">
-            
-           
-            
-            
             $(function(){
-                $("#nav-placeholder").load("nav.html");
+                $(".share-tool-placeholder").load("/Content/share-magazine-tool.html");
             });
             
             $("#previous").on("click",function(event) {

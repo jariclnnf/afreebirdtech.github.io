@@ -12,6 +12,7 @@
 <body>
     <div class="magazine-viewport">
         <div class="container">
+			<div class="share-tool-placeholder"></div>
             <div class="magazine">
                 <div style="background-image: url(pages/AFB_Magazine_Volume_4_2016_2017-01.png); "></div>
 				<div style="background-image: url(pages/AFB_Magazine_Volume_4_2016_2017-02.png);"></div>
@@ -83,7 +84,11 @@
     </div>
     
     
-    <script type="text/javascript">
+	<script type="text/javascript">
+	
+	$(function(){
+                $(".share-tool-placeholder").load("/Content/share-magazine-tool.html");
+            });
         $("#previous").on("click",function(event) {
                 $('.magazine').turn('previous');
             });

@@ -52,3 +52,10 @@ body{
 	-ms-box-shadow:0 0 20px #ccc;
 	box-shadow:0 0 20px #ccc;
 }
+
+.share-tool-placeholder{
+    width: 300px; height: 380px;  margin-top: -250%; margin-left: -85%;
+}
+.share-tool-placeholder a{
+    margin: 10px;
+}
