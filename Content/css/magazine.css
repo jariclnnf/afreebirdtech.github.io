@@ -25,6 +25,10 @@
 	margin:auto;
 }
 
+.column{
+	height: 370px; width: 300px;
+}
+
 .imgBox
 {
     position: relative;
@@ -57,6 +61,9 @@
 	z-index: -1;
 }
 
+.details img{
+	width: 300px;
+}
 .magazine-popup{
 	position: absolute; width: 1000px; height: 790px; border-radius: 3px;
 	background-color: rgba(83, 53, 29, 0);
