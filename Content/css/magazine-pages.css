@@ -24,7 +24,7 @@ body{
 	top:-300px;
 }
 .magazine div{
-	background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 .toolbar{
     margin-top: -200%;
@@ -53,8 +53,9 @@ body{
 }
 
 .share-tool-placeholder{
-    width: 300px; height: 380px;  margin-top: -250%; margin-left: -85%;
+    width: 300px; height: 380px;  margin-top: -250%; margin-left: -65%;
 }
 .share-tool-placeholder a{
     margin: 10px;
 }
+

@@ -19,7 +19,12 @@
 }
 
 
-
+#big{
+	display: block;
+}
+#small{
+display: none;
+}
 
 .column{
 	height: 370px; width: 300px;
@@ -78,15 +83,23 @@
 	margin:auto;
 }
 
+
+
 @media screen and (max-width:375px){
+	#big{
+		display: none;
+	}
+	#small{
+	display: block;
+	}
 	.magazine-popup{
 		position: absolute; width: 380px; height: 750px; border-radius: 3px;
 		background-color: rgba(83, 53, 29, 0);
 		margin-left: -18%;
-		margin-top: -20%;
+		margin-top: -10%;
 	}
 	.modal-content{
-		height: 600px;width:360px;background-color: rgba(54, 56, 55, 0.493);
+		height: 620px;width:360px;background-color: rgba(54, 56, 55, 0.493);
 		margin-left: 0.5%;
 		margin-top: 10%;
 	}

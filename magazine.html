@@ -283,13 +283,33 @@
                                             <!-- Modal content-->
                                             <div class="modal-content"   >
                                                 <div class="modal-body" >
-                                                    <iframe class="magazine-popup" frameborder="0" src="Content/Magazines/AFB_Magazine_2019_v6/index-mobile.html"
+                                                    <iframe class="magazine-popup" id="big" frameborder="0" src="Content/Magazines/AFB_Magazine_2019_v6/index.html"
+                                                    ></iframe>
+                                                    <iframe class="magazine-popup" id="small" frameborder="0" src="Content/Magazines/AFB_Magazine_2019_v6/index-mobile.html"
                                                     ></iframe>
                                                 </div>
                                             </div>
                                             
                                         </div>
                                     </div>
+                                    <!-- <script>    
+                                        (function mobileview(){    
+                                            var link = document.getElementById("2019");    
+                                            function checkWidth() {
+                                                var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                                                    newSrc;
+                                                if (width<1116) {
+                                                  newSrc="Content/Magazines/AFB_Magazine_2019_v6/index-mobile.html";
+                                                } 
+                                                else {
+                                                    newSrc="Content/Magazines/AFB_Magazine_2019_v6/index.html";
+                                               }
+                                               link.src=newSrc;       
+                                            }
+                                            link.onclick = checkWidth;
+                                            checkWidth();
+                                        })();          
+                                    </script>  -->
                                 </div>
                                 
                                 
