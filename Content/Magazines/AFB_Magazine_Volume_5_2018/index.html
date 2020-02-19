@@ -1,25 +1,11 @@
 <!doctype html>
 <html>
 <head>
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="/Content/js/turn.min.js"></script>
-    
-    <style type="text/css">
-        body{
-            /* background:#ccc; */
-        }
-        #magazine{
-            text-align: center;
-            width:1152px;
-            height:752px;
-            /* width:1000%;
-            height:1000%; */
-        }
-        #magazine .turn-page{
-            background-color:#ccc;
-            background-size:100% 100%;
-        }
-    </style>
+    <script type="text/javascript" src="/Content/js/turn.js"></script>
+    <script type="text/javascript" src="/Content/js/modernizr.2.5.3.min.js"></script>
+    <link rel="stylesheet" href="/Content/css/magazine-pages.css">
 </head>
 <body>
     <div id="magazine" >
@@ -86,87 +72,41 @@
                 
                 
                 <script type="text/javascript">
-                    
+	
                     $(function(){
-                        $(".share-tool-placeholder").load("/Content/share-magazine-tool.html");
-                    });
-                    $("#previous").on("click",function(event) {
-                        $('.magazine').turn('previous');
-                    });
-                    $("#next").on("click",function(event) {
-                        $('.magazine').turn('next');
-                    });
-                    
-                    function loadApp() {
-                        $('.magazine').turn({
-                            width:922,
-                            height:600,
-                            elevation: 50,
-                            gradients: true,
-                            autoCenter: true
+                                $(".share-tool-placeholder").load("/Content/share-magazine-tool.html");
+                            });
+                        $("#previous").on("click",function(event) {
+                                $('.magazine').turn('previous');
+                            });
+                            $("#next").on("click",function(event) {
+                                $('.magazine').turn('next');
+                            });
+                
+                        function loadApp() {
+                            $('.magazine').turn({
+                                width:922,
+                                height:600,
+                                elevation: 50,
+                                gradients: true,
+                                autoCenter: true
+                                
+                            });
+                        }
+                        $(window).bind('keydown', function(e){
+                            if (e.keyCode==37)
+                            $('.magazine').turn('previous');
+                            else if (e.keyCode==39)
+                            $('.magazine').turn('next');
                             
                         });
-                    }
-                    $(window).bind('keydown', function(e){
-                        if (e.keyCode==37)
-                        $('.magazine').turn('previous');
-                        else if (e.keyCode==39)
-                        $('.magazine').turn('next');
                         
-                    });
-                    
-                    yepnope({
-                        test : Modernizr.csstransforms,
-                        complete: loadApp
-                    });
-                    
-                </script>
-                
-            </body>
-            </html>
-            
-        </div>
-        <div class="toolbar" style="text-align: center;">
-            <button id="previous">Previous</button>
-            
-            <!-- <label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span> -->
-            
-            <button id="next">Next</button>
-        </div>
-        
-        
-        <script type="text/javascript">
-            $("#previous").on("click",function(event) {
-                $('#magazine').turn('previous');
-            });
-            $("#next").on("click",function(event) {
-                $('#magazine').turn('next');
-            });
-            $(window).ready(function() {
-                $('#magazine').turn({
-                    display: 'double',
-                    acceleration: true,
-                    gradients: !$.isTouch,
-                    elevation:50,
-                    when: {
-                        turned: function(e, page) {
-                            /*console.log('Current view: ', $(this).turn('view'));*/
-                        }
-                    }
-                });
-            });
-            
-            
-            $(window).bind('keydown', function(e){
-                
-                if (e.keyCode==37)
-                $('#magazine').turn('previous');
-                else if (e.keyCode==39)
-                $('#magazine').turn('next');
-                
-            });
-            
-        </script>
+                        yepnope({
+                            test : Modernizr.csstransforms,
+                            complete: loadApp
+                        });
+                        
+                    </script>
         
     </body>
     </html>
